@@ -4,7 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "lint-staged": {
+    "*ts": [
+      "npm run lint:fix"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -16,6 +23,7 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.30.1",
     "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "typescript": "^5.8.3",
