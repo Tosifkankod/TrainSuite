@@ -12,7 +12,7 @@
     "format:fix": "prettier . --fix"
   },
   "lint-staged": {
-    "*ts": [
+    "*.{ts,tsx, js, jsx}": [
       "npm run lint:fix",
       "npm run format:fix"
     ]
