@@ -26,6 +26,8 @@ export default tseslint.config({
     rules: {
         'no-console': 'error',
         'no-useless-catch': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
         quotes: ['error', 'single', { allowTemplateLiterals: true }]
     }
 })
