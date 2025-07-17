@@ -19,7 +19,7 @@ export default function RootLayout({
             <body>
                 <SidebarProvider>
                     <AppSidebar />
-                    <main className="p-2 w-full">
+                    <main className="w-full ">
                         <Header />
                         {children}
                     </main>

@@ -9,7 +9,8 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
     SidebarMenuSub,
-    SidebarMenuSubItem
+    SidebarMenuSubItem,
+    SidebarRail
 } from '@/components/ui/sidebar'
 import { sideBarMenuItem } from '@/constants/sideBarMenuItem'
 import { sideBarItemType } from '@/types/side-bar-item'
@@ -56,6 +57,13 @@ export default function AppSidebar() {
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarFooter>
+            <SidebarRail
+                style={
+                    {
+                        //background: 'red',
+                    }
+                }
+            />
         </Sidebar>
     )
 }
