@@ -17,6 +17,7 @@ import { sideBarItemType } from '@/types/side-bar-item'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible'
 import { DropdownMenu, DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
 import { ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function AppSidebar() {
     return (
@@ -57,13 +58,7 @@ export default function AppSidebar() {
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarFooter>
-            <SidebarRail
-                style={
-                    {
-                        //background: 'red',
-                    }
-                }
-            />
+            <SidebarRail/>
         </Sidebar>
     )
 }
@@ -92,16 +87,16 @@ const MenuItem = ({ item }: { item: sideBarItemType }) => {
                     }
                 >
                     <SidebarMenuSub>
-                        {item.subMenu.map((subItem: sideBarItemType, subIndex: number) => (
-                            <SidebarMenuSubItem key={subIndex}>
-                                <a
-                                    href={subItem.url || '#'}
-                                    className="flex items-center text-sm pl-8 text-muted-foreground hover:text-foreground" // Submenu: smaller font, indented
+                        {item.subMenu.map((subItem: sideBarItemType, subIndex: number) => {
+                           return <SidebarMenuSubItem key={subIndex}>
+                                <Link
+                                    href={subItem.url || ''}
+                                    className="flex items-center text-sm pl-8 text-muted-foreground hover:text-foreground"
                                 >
                                     <span>{subItem.title}</span>
-                                </a>
+                                </Link>
                             </SidebarMenuSubItem>
-                        ))}
+                        })}
                     </SidebarMenuSub>
                 </CollapsibleContent>
             </SidebarMenuItem>

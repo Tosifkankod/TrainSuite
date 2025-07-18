@@ -12,14 +12,14 @@ export const sideBarMenuItem: Array<sideBarItemType> = [
         icon: GraduationCap,
         subMenu: [
             {
-                title: 'view student',
+                title: 'student',
                 icon: GraduationCap,
-                url: '#'
+                url: '/students'
             },
             {
                 title: 'create student',
                 icon: GraduationCap,
-                url: '#'
+                url: '/students/create'
             }
         ]
     },

@@ -1,6 +1,6 @@
 import { Separator } from '@radix-ui/react-separator'
 import { SidebarTrigger } from '../ui/sidebar'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '../ui/breadcrumb'
+import DynamicBreadcrumb from '../BreadCrumb/BreadCrumb'
 
 export default function Header() {
     return (
@@ -13,21 +13,7 @@ export default function Header() {
                 orientation="vertical"
                 className="h-6 w-px bg-border"
             />
-            <Breadcrumb>
-                <BreadcrumbList>
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/">Home</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator />
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/components">Components</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator />
-                    <BreadcrumbItem>
-                        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-                    </BreadcrumbItem>
-                </BreadcrumbList>
-            </Breadcrumb>
+            <DynamicBreadcrumb />
         </header>
     )
 }
